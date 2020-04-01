@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="HearForm.css" type="text/css">
+
+<title>اختبار السمع</title>
+<!-- لازم الكل يسمع الصوت الأول، اذا سمع الصوت الثاني هو اصغر من 50 ،اذا سمع الصوت الثالث هو اصغر من 20 -->
+<style type="text/css">
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-image: url('P1.png');
+  direction: rtl;
+  
+}
+</style>
+</head>
+
+<body>
+
+<audio src="v1.mp3"></audio>
+<header>اختبار لحاسة السمع</header>
+<div class="content">
+<div class="intro">
+<h1>هل نستطيع تقدير عمرك من حاسة السمع لديك؟ هذا ما ستكتشفة من خلال هذا الإختبار</h1>
+<h2>الآن سوف تستمع لعدة اصوات، الرجا الضغط على نعم عند سماع احدها</h2>
+<h3>للحصول على نتائج افضل الرجاء الذهاب الى مكان منعزل وارتداء سماعة الرأس</h3>
+</div>
+<form>
+
+<fieldset><legend><label>هل تستطيع سماع هذا الصوت؟<br></label></legend>
+<audio controls="controls" class="audio">
+<source src="V1.mp3" type="audio/mpeg">
+<source src="V1.wav" type="audio/wav">
+</audio>
+<div class="container" >
+  <div class="radio">
+    <input id="radio-1" name="Q1" id="Q" type="radio" checked>
+    <label for="radio-1" class="radio-label"> نعم </label>
+  </div>
+
+  <div class="radio">
+    <input id="radio-2" name="Q1" id="Q11" type="radio">
+    <label  for="radio-2" class="radio-label"> لا </label>
+  </div>
+</div>
+ </fieldset>
+  
+  <br><br>
+<fieldset><legend><label>هل تستطيع سماع هذا الصوت؟<br></label></legend>
+<audio controls="controls" class="audio">
+<source src="V2.mp3" type="audio/mpeg">
+<source src="V2.wav" type="audio/wav">
+</audio>
+<div class="container">
+  <div class="radio">
+    <input id="radio-3" name="Q2" id="Q20" type="radio" checked>
+    <label for="radio-3" class="radio-label"> نعم </label>
+  </div>
+
+  <div class="radio">
+    <input id="radio-4" name="Q2" id="Q22" type="radio">
+    <label  for="radio-4" class="radio-label"> لا </label>
+  </div>
+</div>
+
+  </fieldset>
+  <br><br>
+<fieldset><legend><label>هل تستطيع سماع هذا الصوت؟<br></label></legend>
+<audio controls="controls" class="audio">
+<source src="V3.mp3" type="audio/mpeg">
+<source src="V3.wav" type="audio/wav">
+</audio>
+<div class="container">
+  <div class="radio">
+    <input id="radio-5" name="Q3" id="Q30" type="radio" checked>
+    <label for="radio-5" class="radio-label"> نعم </label>
+  </div>
+
+  <div class="radio">
+    <input id="radio-6" name="Q3" id="Q33" type="radio">
+    <label  for="radio-6" class="radio-label"> لا </label>
+  </div>
+</div>
+
+  </fieldset><br><br>
+
+<div class="container">
+<div class="radio">
+<input type="radio" name="Q1" id="Q110"  value="Yes">
+<label class="radio-label" for="Q110">YES</label><br>
+</div>
+<div class="radio">
+<input type="radio" name="Q1" id="Q120"  value="No"><label class="radio-label" for="Q120">No</label><br>
+</div>
+<button type="button" onclick="myFunction2()">Click Me!</button>
+</div>
+
+  <input type="button" value="النتيجة" class="button" onclick="myFunction2()">
+<input type="reset" value="أعد الإختبار" class="button">
+
+<p>النتيجة:</p>
+<p id="demo0"></p>
+<p id="demo1"></p>
+
+</form>
+
+
+</div>
+<script type="text/javascript">
+var x,x2,x3,text;
+x1 = document.getElementById("Q110");
+x2 = document.getElementById("Q20");
+x3 = document.getElementById("Q30");
+
+function myFunction() {
+	
+document.write(x.value);	
+	/*document.getElementById("demo0").innerHTML = x;
+if (x.checked==true){
+text= "كل الأشخاص يجي ان يسمعو الصوت الأول";
+document.getElementById("demo1").alert = text;
+}
+else if (x2.checked==true){ 
+	text = "يقدر عمرك بأقل من 50 سنه";}
+else if (x2.checked==true){text = "يقدر عمرك بأقل من 20 سنه"; }*/
+
+}
+function myFunction2() {
+	if (x1.checked==true){
+	text= x1.value;
+	}else{ 
+	text = "How are you?";}
+	document.getElementById("demo1").innerHTML = text;
+	}
+</script>
+</body>
+</html>
