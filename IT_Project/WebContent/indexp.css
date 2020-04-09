@@ -8,11 +8,11 @@ header {
   padding-left:350px;
   padding-Right:350px;
   text-align: center;
-  color: white;
-  font-size: 50px;
 }
+
 #Header{
 	background: rgb(0, 0, 0,0.5); 
+    font-size: 80px;
 }
 
 /*----------navigation bar code----------*/
@@ -30,6 +30,7 @@ nav a {
   text-align: center;
   padding: 10px 15px;
   text-decoration: none;
+  font-weight:bold;
 }
 /* Style of HOME link */
 nav a.right {
@@ -46,7 +47,6 @@ nav a:hover {
 
 /*⁄‘«‰ Ì‰“· „⁄«Ì« «·‘—Ìÿ*/
 .sticky {position: fixed;top: 0;width: 100%;}
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .Left + .Right {padding-top: 60px;}
 
 /*----------header----------*/
@@ -54,17 +54,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background-image: url('P1.png');
+  direction: rtl;
   
 }
 /*----------Content code----------*/
-p{
-	align: right;
-}
-h1,h2,h3{color:rgb(235, 183, 179);}
-.Pic{
-	color:lightblue;
-	
-}
+
+section { margin:50px 50px 0px 50px; }
+
+h1 {text-align: center; color:rgb(235, 183, 179); font-size: 40px;}
+
+h3 { color:rgb(235, 183, 179); }
+
+p { align: right; }
+
+.Pic { color:lightblue; }
+
 /*right column (Article)*/
 .Right{
   float: right;
@@ -78,14 +82,48 @@ h1,h2,h3{color:rgb(235, 183, 179);}
 
 .Content{
 	padding:20px;
+	color: white;
+}
+/*Form button*/
+.button { 
+   width: 40%;
+   height:90px;
+  border-radius: 12px;
+  background-color: rgb(235, 183, 179,0.73); /* Green */
+  color: white;
+  padding: 10px 5px 10px 5px;
+  text-align: center;
+  direction: rtl;
+  display: inline-block;
+  font-size: 24px;
+  
 }
 @media screen and (max-width: 800px) {
    .Right {   
-    width: 100%;
+    max-width: 100%;
     padding: 0;
   }}
 
+@media only screen and (max-width: 600px) {
+  .sticky {height:10%;}
+  nav {
+  display: block;
+	width:100%; }
+	nav a{float: left;
+    width: 15%; padding: 0.1% 0.5%;}
+	nav a.right {float: right; font-size:16px; padding-top:3%; padding-bottom:5%}
+  nav img{max-width: 100%;}
+  header {font-size:30px; padding-left:20%; padding-Right:20%;}
 
+	.Right{ width: 100%; padding: 25px 15px 20px 15px; font-size:x-large;}
+	h3{font-size:x-large;}
+pre{font-size:10px; padding: 5px 10px;}
+section { margin:30px 0px 0px 10px; }
+tr,td{padding: 1px;
+  text-align: right;}
+  table{font-size:15px;}
+  textarea{cols:"20";}
+}
 
 
 

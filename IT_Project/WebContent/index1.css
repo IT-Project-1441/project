@@ -7,7 +7,6 @@ header {
   padding-left:350px;
   padding-Right:350px;
   text-align: center;
-  color: white;
   font-size: 50px;
 }
 #Header{
@@ -46,7 +45,6 @@ nav a:hover {
 
 /*⁄‘«‰ Ì‰“· „⁄«Ì« «·‘—Ìÿ*/
 .sticky {position: fixed;top: 0;width: 100%;}
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .Left + .Right {padding-top: 60px;}
 
 
@@ -87,13 +85,13 @@ float: right;
   padding: 20px;
 }
 
-
+.Left img{width:100%; height:50%; padding:2%;}
 .Content{
 	padding:20px;
 }
 @media screen and (max-width: 800px) {
   .Left, .Right {   
-    max-width:100%; /*----------##########----------€Ì—  Â‰«----------##########----------*/
+    max-width:100%; 
     padding: 0;
   }}
   
@@ -125,7 +123,7 @@ footer a:hover {
   background-color: #a5a5a5;
   color: black;
 }
-/*----------##########----------€Ì—  Â‰«----------##########----------*/
+
 /*---------------------------------mobile---------------------------------*/
 @media only screen and (max-width: 600px) {
   .sticky {height:10%;}
@@ -137,7 +135,7 @@ footer a:hover {
 	nav a.right {float: right; font-size:16px; padding-top:3%; padding-bottom:5%}
   nav img{max-width: 100%;}
   header {font-size:30px; padding-left:20%; padding-Right:20%;}
-	.Left{padding: 10px; }
+	.Left{padding: 2%; }
 	.Left img{width:100%; height:50%;}
 	.Right{padding: 25px 10px 20px 15px; font-size:x-large;}
 	h2{font-size:x-large;}
